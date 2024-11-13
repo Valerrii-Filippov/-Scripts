@@ -9,4 +9,5 @@ __pycache__
 .venv
 .env*
 *.lock
-*.html
+*html 
+*htmll
