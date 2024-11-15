@@ -16,7 +16,7 @@ class WebToursBaseScenarioConfig(ScenarioConfig):
 
 class Config(BaseSettings):
    locust_locustfile: str = Field("./locustfile.py", env="LOCAST_LOCASTFILE") 
-   url: str = Field('http://localhost:1080', env="URL")
+   url: str = Field('http://webtours.load-test.ru:1080', env="URL")
    loadshape_type: str = Field('baseline', env="LOADSHAPE_TYPE")
    webtours_base: WebToursBaseScenarioConfig
    webtours_cancel: WebToursBaseScenarioConfig

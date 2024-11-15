@@ -108,10 +108,6 @@ class PurchaseFlightTicket(SequentialTaskSet): # класс с задачами 
             self.address1 =self.users_data_row["address1"]
             self.address2 =self.users_data_row["address2"]
             
-
-
-
-
             logger.info(f"chosen username: {self.username}/password: {self.password}")
 
             r01_00_body = f"userSession={self.user_session}&username={self.username}&password={self.password}&login.x=0&login.y=0&JSFormSubmit=off"

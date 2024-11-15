@@ -5,6 +5,7 @@ from config.config import cfg, logger
 class MyCustomLoadShape(LoadTestShape):
     match cfg.loadshape_type:
         case "baseline":
+            print ("сейчас будет бейзлайн")
             stages = [
                 {"duration": 60, "users": 1, "spawn_rate": 1}
             ]
