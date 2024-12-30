@@ -19,7 +19,7 @@ public class words {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;
             while ((line = br.readLine()) != null) {
-                String[] words = line.split("W+"); // Разбиваем строку по не буквенным символам
+                String[] words = line.split("\\W"); // Разбиваем строку по не буквенным символам
                 for (String word : words) {
                     if (!word.isEmpty()) {
                         word =
@@ -42,7 +42,7 @@ public class words {
         // Вывод слов и их частоты
         System.out.println("Слова в алфавитном порядке и их частота:");
         for (String word : sortedWords) {
-            System.out.println(word + ":" + wordCounts.get(word));
+            System.out.println(word + " " + wordCounts.get(word));
         }
 
         // Нахождение слова с максимальной частотой
